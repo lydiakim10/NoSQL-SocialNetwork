@@ -78,7 +78,10 @@ const userController = {
                             $in: userData.thoughts
                         }
                     }
-                );
+                )
+            })
+            .then(() => {
+                res.json({ message: "User successfully deleted!" });
             })
             .catch((err) => {
                 console.log(err);

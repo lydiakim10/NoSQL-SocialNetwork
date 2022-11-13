@@ -104,6 +104,7 @@ const thoughtController = {
                 res.status(404).json({ message: "Thought created, but no user found with this ID!" });
                 return;
             }
+            res.json({ message: "Thought successfully deleted!" });
         })
         .catch((err) => {
             console.log(err);
